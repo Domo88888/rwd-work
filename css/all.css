@@ -1,0 +1,515 @@
+/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 全域 border box */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+/* .container{
+	max-width: 1000px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0 auto;
+} */
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: Microsoft JhengHei, arial, helvetica, sans-serif;
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #3D1101;;
+}
+
+p{
+    line-height: 1.3;
+}
+/* CSS Reset end */
+
+/* header */
+.header{
+    height: 420px;
+    background: url(../images/header_desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.nav{
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin-bottom: 67px;
+}
+
+.logo a{
+    display: block;
+    width: 120px;
+    height: 24px;
+    margin: 16px;
+    background: url(../images/logo_w@svg.svg);
+    background-size: contain;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.menu li a{
+    display: block;
+    color: #FFFFFF;
+    padding: 20px 15px;
+}
+/* 隱藏下拉式選單 */
+.showmenu{
+    font-size: 24px;
+    padding: 0px 20px;
+    display: none;
+}
+@media (max-width:768px){
+    .nav{
+        padding: 0;
+    }
+}
+
+@media (max-width:767px) {
+    .menu{
+        /* 隱藏選單 */
+        max-height: 0px;
+        overflow: hidden;
+        z-index: 100;
+        flex-direction: column;
+        text-align: right;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        right: 0;
+        background: #0a0a0a;
+        transition: max-height 1s;
+    }
+    .menu li{
+        border-bottom: 1px dashed #FFFFFF;
+    }
+    .menu li a:hover{
+        background-color: rgba(255,0,0,0.3);
+    }
+    .menu li a:active{
+        background-color: rgba(255,0,0,0.8);
+    }
+    .showmenu{
+        display: block;
+        color: #FFFFFF;
+    }
+    .menu-show .menu{
+        max-height: 500px;
+    }
+
+}
+.contain{
+    /* width: 100%; */
+    /* height: 366px; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    /* background: rgba(0,0,0,0.35); */
+    /* margin: 0 auto; */
+}
+.contain div{
+    background: rgba(0,0,0,0.35);
+    padding: 20px 30px;
+}
+
+.contain h2{
+    font-size: 36px;
+    padding: 6px 0;
+    margin-bottom: 16px;
+}
+.contain p{
+    text-align: center;
+    line-height: 1.5;
+    /* font-size: 16px; */
+    margin-bottom: 5px;
+}
+/* .contain p img{
+    width: 13px;
+    height: 16px;
+} */
+
+
+/* main */
+html{
+    scroll-behavior: smooth;
+}
+
+.feature{
+    background-color: #efe9e7;
+    padding: 50px 0;
+}
+.feature h3{
+    width: 225px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto 40px auto;
+}
+.feature .hr_l{
+    background-color: #979797;
+    height: 2px;
+    border: none;
+    position: relative;
+    top: 33px;
+    width: 460px;
+    margin: 0 auto;
+}
+.feature .hr_s{
+    background-color: #efe9e7;
+    height: 2px;
+    border: none;
+    position: relative;
+    top: 31px;
+    width: 225px;
+    margin: 0 auto;
+}
+.feature ul{
+    display: flex;
+    justify-content: center;
+}
+
+.feature li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    max-width: 25%;
+    /* height: 380px; */
+    margin: 0 30px;
+}
+
+.feature li img{
+    /* width: 200px; */
+    /* height: 200px; */
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feature h4{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.chef{
+    background-color: #3d1101;
+    color: #efe9e7;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 0 40px;
+}
+.chef_pic{
+    background-image: url(../images/main_chef_brown.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-size: contain; */
+    /* display: block; */
+    /* max-width: 470px; */
+    width: 470px;
+    height: 460px;
+    margin-right: 25px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.chef_intro{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-content: center;
+    /* margin-right: 40px; */
+    width: 380px;
+    /* padding: 80px 0 80px 30px; */
+}
+
+.chef h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.chef h4{
+    margin-bottom: 20px;
+}
+
+@media (max-width:768px) {
+    .chef{
+        padding: 0 30px 0 10px;
+    }
+}
+
+.customer{
+    background-color: #efe9e7;
+    padding: 50px 30px;
+}
+.customer h3{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.customer ul{
+    display: flex;
+    justify-content: center;
+}
+.customer li{
+    display: flex;
+    align-items: baseline;
+    /* justify-content: center; */
+    /* width: 33.33%; */
+    /* flex: 1; */
+    /* margin-right: 10px; */
+    margin: 0 10px;
+}
+
+.customer .c1, .customer .c2, .customer .c3{
+    background-repeat: no-repeat;
+    flex: 0 0;
+    flex-basis: 67px;
+    line-height: 67px;
+    border-radius: 50%;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.c1{
+    background-image: url(../images/avatar_1.png);
+}
+.c2{
+    background-image: url(../images/avatar_2.png);
+}
+.c3{
+    background-image: url(../images/avatar_3.png);
+}
+
+.customer .c_exp{
+    flex-grow: 1;
+}
+.c_exp p:nth-child(1){
+    line-height: 67px;
+    font-size: 18px;
+}
+.c_exp p:nth-child(2){
+    margin-bottom: 16px;
+}
+.c_exp p:nth-child(3){
+    text-align: right;
+}
+/* .customer li img{
+    border-radius: 50%;
+    display: block;
+} */
+
+@media (max-width:768px){
+    .customer{
+        padding: 50px 0;
+    }
+}
+
+.reservation{
+    background-color: rgba(250,250,250,0.7);
+    padding: 50px 10px;
+}
+.reservation h3{
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 50px;
+}
+.reservation>div{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+.map{
+    background-image: url(../images/Map.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    flex-basis: 460px;
+    /* width: 460px; */
+    height: 386px;
+    margin-right: 20px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.re_info{
+    flex-basis: 460px;
+    position: relative;
+}
+.re_info p{
+    margin-bottom: 12px;
+}
+input[type="text"],input[type="tel"],input[type="email"],input[type="number"]{
+    width: 100%;
+    height: 32px;
+    padding-left: 14px;
+    margin-bottom: 12px;
+}
+.y_n{
+    display: flex;
+    align-items: center;
+}
+input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    margin: 0 36px 0 6px;
+}
+.sum{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+}
+.sum input{
+    width: 70px;
+    height: 32px;
+    color: #FFFFFF;
+    border-radius: 3px;
+    border: 0px;
+    margin-left: 10px;
+}
+.sum .cancel{
+    background: rgba(0,0,0,0.35);
+}
+.sum .send{
+    background: #F56C23;
+}
+.sum .cancel:active{
+    background: rgba(0,0,0,0.7);
+}
+.sum .send:active{
+    background: #d40000;
+}
+
+
+
+
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #efe9e7;
+    /* height: 50px; */
+    padding: 50px 40px;
+}
+
+.info{
+    display: flex;
+    /* justify-content: flex-start; */
+}
+.info div{
+    max-width: 45%;
+    margin-right: 20px;
+}
+.info h3{
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+
+.footer h2 a{
+    display: block;
+    background-image: url(../images/logo_l@svg.svg);
+    width: 243px;
+    height: 48px;
+    margin-bottom: 20px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.social{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 36px;
+}
+
+.social a{
+    display: block;
+}
+.social .gplus a{
+    color: #DB4437;
+    margin-right: 12px;
+}
+.social .twitter a{
+    color: #41abe1;
+    margin-right: 12px;
+}
+.social .facebook a{
+    color: #3a5795;
+}
+@media (max-width:768px){
+    .footer{
+        padding: 50px 10px;
+    }
+}
