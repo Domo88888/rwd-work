@@ -1,6 +1,7 @@
 $(document).ready(function(){
-    $('.showmenu').on('click', function(e){
+    $('.hamburger').on('click', function(e){
         e.preventDefault();
         $('body').toggleClass('menu-show');
+        $(this).find('[data-fa-i2svg]').toggleClass('fa-bars').toggleClass('fa-chevron-down');
     });
 });
