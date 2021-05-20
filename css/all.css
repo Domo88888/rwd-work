@@ -993,6 +993,11 @@ html{
         width: 100%;
         justify-content: flex-end;
     }
+    .itemcard{
+        width: 48%;
+    }
+}
+@media (max-width:414px) {
     .items-area ul{
         justify-content: space-around;
     }
@@ -1000,9 +1005,8 @@ html{
         width: 80%;
     }
 }
-@media (max-width:414px) {
+@media (max-width:320px) {
     .itemcard{
         width: 100%;
     }
-    
 }
