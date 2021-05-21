@@ -287,10 +287,6 @@ html{
         align-items: center;
         margin: 15px 30px;
     }
-    .feature-list img{
-        width: 200px;
-        height: 200px;
-    };
 }
 
 .chef{
