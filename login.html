@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>六角西餐廳(RWD work)</title>
+    <link rel="shortcut icon" href="images/burger-icon.png">
+    <meta name="description" content="咬一口就無法忘懷的漢堡!!絕對無法錯過的好滋味!!">
+
+    <meta property="og:title" content="六角西餐廳~咬一口就無法忘懷的漢堡!!">
+    <meta property="og:description" content="六角西餐廳~咬一口就無法忘懷的漢堡!!絕對無法錯過的好滋味!!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/MccT5N0.png">
+
     <link rel="stylesheet" href="css/all.css">
     <script src="js/all.min.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -27,7 +36,7 @@
                 <!-- <i class="fas fa-chevron-down"></i> -->
             </div>
             <div class="contain">
-                <div>
+                <div class="contain-mask">
                     <h2>咬一口就<br>無法忘懷的漢堡</h2>
                     <p>
                         七夕絕對無法錯過的好滋味<br>
@@ -39,16 +48,16 @@
         <div class="login">
             <h2>六角西餐廳</h2>
             <p>享受美食的好味道</p>
-            <div>
+            <div class="login-area">
                 <h3>LOGIN</h3>
-                <p>Email Address*</p>
-                <input type="email" placeholder="E-mail">
-                <p>Password*</p>
-                <input type="password" placeholder="Password">
-                <a href="">忘記密碼？</a>
-                <div class="login_summit">
-                    <input class="login_cancel" type="button" value="取消">
-                    <input class="login_send" type="button" value="送出">
+                <label for="login-email">Email Address*</label>
+                <input id="login-email" type="email" placeholder="E-mail">
+                <label for="login-password">Password*</label>
+                <input id="login-password" type="password" placeholder="Password">
+                <p><a href="#">忘記密碼？</a></p>
+                <div class="login-btns">
+                    <input class="login-cancel" type="button" value="取消">
+                    <input class="login-submit" type="button" value="送出">
                 </div>
             </div>
         </div>
@@ -60,11 +69,11 @@
                 </div>
                 <div>
                     <h3>聯絡方式</h3>
-                    <p>
-                        •	高雄市中正五路到底<br>
-                        •	+886 886 886<br>
-                        •	service@hexschool.com
-                    </p>
+                    <ul>
+                        <li>高雄市中正五路到底</li>
+                        <li>+886 886 886</li>
+                        <li>service@hexschool.com</li>
+                    </ul>
                 </div>
             </div>
             <div>
