@@ -1,6 +1,9 @@
-# 響應式網頁(RWD)練習
+# 響應式網頁(RWD)實作
 ---
-### 純 CSS 實作 RWD
+https://domo88888.github.io/rwd-work/
+
+純 CSS 實作 RWD
+
 ***
 
 
