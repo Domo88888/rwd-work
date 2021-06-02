@@ -1,0 +1,93 @@
+/* login */
+.login{
+    background-color: $primary-light;
+    padding: 50px 0 10px 0;
+    >h2{
+        background-image: url(../images/logo_l@svg.svg);
+        width: 243px;
+        height: 48px;
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 auto 5px auto;
+    }
+    >p{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+}
+.login-area{
+    width: 300px;
+    margin: 0 auto;
+    border-top: 3px solid $highlight;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    padding: 15px;
+    h3{
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    >label{
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 15px;
+    }
+    >input{
+        width: 100%;
+        height: 32px;
+        padding-left: 10px;
+        border: 1px solid #CCCCCC;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        border-radius: 3px;
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    a{
+        /* display: block; */
+        font-size: 14px;
+        color: $highlight;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        &:hover{
+            color: #0000ff;
+        }
+    }
+}
+.login-btns{
+    display: flex;
+    justify-content: space-between;
+    input{
+        width: 125px;
+        height: 32px;
+        color: #FFFFFF;
+        border-radius: 3px;
+        border: 0px;
+        cursor: pointer;
+    }
+    .login-cancel{
+        background: rgba(0,0,0,0.35);
+        &:hover{
+            background: rgba(0,0,0,0.7);
+        }
+        &:active{
+            background: rgba(0,0,0,1);
+        }
+    }
+    .login-submit{
+        background: #F56C23;
+        &:hover{
+            background: #ff0000;
+        }
+        &:active{
+            background: #0000ff;
+        }
+    }
+}
+@include mobile320(){
+    .login-area{
+        width: 98%;
+    }
+}

@@ -1,0 +1,139 @@
+/* header */
+.header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 420px;
+    background: url(../images/header_desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.nav{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo a{
+    display: block;
+    width: 120px;
+    height: 24px;
+    margin: 16px;
+    background: url(../images/logo_w@svg.svg);
+    background-size: contain;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu{
+    display: flex;
+    li a{
+        display: block;
+        color: #FFFFFF;
+        padding: 20px 15px;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: rgba(255,255,255,0.25);
+        }
+    }
+}
+
+/* 隱藏下拉式選單 */
+.hamburger{
+    font-size: 24px;
+    padding: 0px 20px;
+    display: none;
+}
+@include pad(){
+    .nav{
+        padding: 0;
+    }
+}
+@include mobile767(){
+    .menu{
+        /* 隱藏選單 */
+        max-height: 0px;
+        overflow: hidden;
+        z-index: 100;
+        flex-direction: column;
+        text-align: right;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        right: 0;
+        background: #0a0a0a;
+        transition: max-height 1s;
+        li{
+            border-bottom: 1px dashed #FFFFFF;
+        }
+        li a{
+            &:hover{
+                background-color: rgba(255,0,0,0.3);
+            }
+            &:active{
+                background-color: rgba(255,0,0,0.8);
+            }
+        }
+    }
+    .hamburger{
+        display: block;
+        color: #FFFFFF;
+    }
+    .menu-show .menu{
+        /* 開啟選單 */
+        max-height: 500px;
+    }
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.contain-mask{
+    background: rgba(0,0,0,0.35);
+    padding: 20px 30px;
+    h2{
+        font-size: 36px;
+        margin-bottom: 16px;
+        text-align: center;
+        line-height: 1.3;
+        br{
+            display: none;
+        }
+    }
+    p{
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+}
+
+@include mobile569(){
+    .header{
+        background: url(../images/header_mobile.png);
+    }
+    .contain-mask{
+        padding: 20px 6px;
+        margin: 0 10px;
+    }
+}
+@media (max-width: 450px) {
+    .contain-mask h2 br{
+        display: block;
+    }
+}
+@include mobile320(){
+    .header{
+        background-position-x: -110px;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,29 @@
+$primary-light: #EFE9E7;
+$primary-dark: #3D1101;
+$highlight: #FF5E45;
+
+@mixin pad(){
+    @media (max-width:768px) {
+        @content;
+    }
+}
+@mixin mobile767(){
+    @media (max-width:767px) {
+        @content;
+    }
+}
+@mixin mobile569(){
+    @media (max-width:569px) {
+        @content;
+    }
+}
+@mixin mobile414(){
+    @media (max-width:414px) {
+        @content;
+    }
+}
+@mixin mobile320(){
+    @media (max-width:320px) {
+        @content;
+    }
+}

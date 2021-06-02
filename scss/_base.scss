@@ -1,0 +1,22 @@
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img{
+    max-width: 100%;
+    height: auto;
+  }
+  /* 全域 border box */
+  *,*::before,*::after{
+    box-sizing: border-box;
+  }
+a{
+	text-decoration: none;
+}
+  .wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: Microsoft JhengHei, arial, helvetica, sans-serif;
+    font-size: 16px;
+    color: #3D1101;
+}
+p{
+    line-height: 1.3;
+}
